@@ -38,10 +38,14 @@ export default function Search({
 
   useEffect(() => {
     if (pendingFocus && inputRef.current) {
-      inputRef.current.focus()
-      setPendingFocus(false)
+      // Use setTimeout to avoid synchronous setState warning
+      const timer = setTimeout(() => {
+        inputRef.current?.focus()
+        setPendingFocus(false)
+      }, 0)
+      return () => clearTimeout(timer)
     }
-  }, [pendingFocus, isActive])
+  }, [pendingFocus])
 
   const activate = useCallback(() => {
     if (!isActive) {
