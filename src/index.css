@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+/* ============================================
+   HaloChat Design Tokens — Light Mode
+   Source: Light Mode.tokens.json (Figma)
+   ============================================ */
+
+@theme {
+  --font-family-sans: 'Manrope', sans-serif;
+
+  /* --- Color: Text --- */
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #808080;
+  --color-text-tertiary: #a3a3a3;
+  --color-text-quaternary: #cccccc;
+  --color-text-on: #ffffff;
+
+  /* --- Color: Fill --- */
+  /* fill/primary: white/50   → use bg-white/50 */
+  /* fill/secondary: black/20 → use bg-black/20 */
+  /* fill/tertiary: black/6   → use bg-black/[0.06] */
+  /* fill/quaternary: black/3 → use bg-black/[0.03] */
+  /* fill/tabbar-dark: black/50 */
+
+  /* --- Color: Background --- */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f7f7f7;
+  --color-bg-tertiary: #ebebeb;
+
+  /* --- Color: Background Vibrant --- */
+  /* bg-vibrant/primary: #f7f7f7 @ 80% → rgba(247,247,247,0.8)  sheet背景 */
+  /* bg-vibrant/secondary: white @ 70% → rgba(255,255,255,0.7)   tabbar背景 */
+
+  /* --- Color: Labels --- */
+  /* Labels/primary: black/70  → text-black/70 */
+  /* Labels/secondary: black/50 */
+  /* Labels/tertiary: black/40 */
+
+  /* --- Color: Accents — Brand (Purple) --- */
+  --color-brand: #703eff;
+  --color-brand-80: color-mix(in srgb, #703eff 80%, transparent);
+  --color-brand-40: color-mix(in srgb, #703eff 40%, transparent);
+  --color-brand-10: color-mix(in srgb, #703eff 10%, transparent);
+  --color-brand-5: color-mix(in srgb, #703eff 5%, transparent);
+
+  /* --- Color: Accents — Function --- */
+  --color-link: #2f65e2;
+  --color-success: #00b600;
+  --color-danger: #ff3b3b;
+  --color-warning: #ff9d00;
+
+  /* --- Color: Divider --- */
+  --color-divider-primary: #f2f2f2;
+  --color-divider-secondary: #ebebeb;
+  --color-divider-tertiary: #e0e0e0;
+  /* divider/quaternary: black/5 → border-black/5 */
+
+  /* --- Color: Outline --- */
+  --color-outline-primary: #f7f7f7;
+  --color-outline-secondary: #ebebeb;
+  --color-outline-tertiary: #cccccc;
+
+  /* --- Color: Miscellaneous --- */
+  /* mask: black/30 → bg-black/30 */
+
+  /* --- Size: Radius --- */
+  --radius-sheet: 38px;
+  --radius-alerts: 34px;
+  --radius-card: 26px;
+  --radius-full: 999px;
+  --radius-color-icon: 9px;
+  --radius-chat-l: 16px;
+  --radius-chat-s: 8px;
+
+  /* --- Size: Padding --- */
+  --padding-x-default: 16px;
+  --padding-x-menu: 20px;
+  --padding-x-chat: 10px;
+  --padding-y-default: 12px;
+  --padding-y-menu: 10px;
+
+  /* --- Size: Gap --- */
+  --gap-default: 24px;
+  --gap-l: 20px;
+  --gap-m: 16px;
+  --gap-s: 12px;
+  --gap-xs: 8px;
+  --gap-xxs: 4px;
+
+  /* --- Size: Margin --- */
+  --margin-xs: 8px;
+  --margin-s: 12px;
+  --margin-default: 16px;
+  --margin-permissions: 20px;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  touch-action: manipulation;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+  -webkit-user-select: none;
+  user-select: none;
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+}
+
+#root {
+  width: 100%;
+  min-height: 100dvh;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+input, textarea {
+  -webkit-user-select: auto;
+  user-select: auto;
+}
